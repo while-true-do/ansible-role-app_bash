@@ -1,0 +1,23 @@
+---
+# tasks file for while_true_do.app_bash
+
+- name: Manage bash Packages
+  package:
+    name: "{{ wtd_app_bash_package }}"
+    state: "{{ wtd_app_bash_package_state }}"
+  become: true
+  tags:
+    - bash
+    - package
+
+- name: Manage bash devel Packages
+  package:
+    name: "{{ wtd_app_bash_devel_package }}"
+    state: "{{ wtd_app_bash_devel_package_state }}"
+  become: true
+  when:
+    - wtd_app_bash_devel_package_state != "unmanaged"
+  tags:
+    - bash
+    - package
+    - devel

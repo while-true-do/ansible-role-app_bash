@@ -1,0 +1,19 @@
+---
+# defaults file for while_true_do.app_bash
+
+# Using dependencies to other roles
+# meta/main.yml
+wtd_app_bash_dep_mgmt: true
+
+wtd_app_bash_package:
+  - bash
+  - bash-completion
+# State can be present|latest|absent
+wtd_app_bash_package_state: "present"
+
+# Tools used for bash scripting
+wtd_app_bash_devel_package:
+  - ShellCheck
+  - bats
+# State can be present|latest|absent|unmanaged
+wtd_app_bash_devel_package_state: "unmanaged"

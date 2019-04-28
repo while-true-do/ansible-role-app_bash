@@ -1,0 +1,33 @@
+---
+# meta file for while_true_do.app_bash
+galaxy_info:
+  role_name: app_bash
+  author: while-true-do.io
+  description: An Ansible Role to install Bash and bash development tools.
+
+  license: BSD
+
+  min_ansible_version: 2.7
+
+  # Supported platforms: https://galaxy.ansible.com/api/v1/platforms/
+  # Please also maintain
+  # - molecule/default/molecule.yml
+  # - molecule/default/tests/test_default.py
+  platforms:
+    - name: EL
+      versions:
+        - 7
+
+    - name: Fedora
+      versions:
+        - 29
+
+  galaxy_tags:
+    - bash
+    - package
+
+dependencies:
+  - role: while_true_do.rpo_epel
+    when:
+      - ansible_distribution == "CentOS"
+      - wtd_app_bash_dep_mgmt
