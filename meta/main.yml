@@ -25,6 +25,9 @@ galaxy_info:
   galaxy_tags:
     - bash
     - package
+    - development
+    - system
+    - configuration
 
 dependencies:
   - role: while_true_do.rpo_epel
