@@ -32,5 +32,6 @@ galaxy_info:
 dependencies:
   - role: while_true_do.rpo_epel
     when:
-      - ansible_distribution == "CentOS"
+      - ansible_distribution == "CentOS" or
+        ansible_distribution == "RedHat"
       - wtd_app_bash_dep_mgmt
