@@ -114,6 +114,13 @@ can be done in a
       wtd_app_bash_devel_package_state: "present"
 ```
 
+## Known Issues
+
+1.  RedHat Testing is currently not possible in public, due to limitations
+    in subscriptions.
+2.  Some services and features cannot be tested properly, due to limitations
+    in docker.
+
 ## Testing
 
 Most of the "generic" tests are located in the
