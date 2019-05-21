@@ -20,7 +20,7 @@ license: BSD-3-Clause
 
 # Ansible Role: app_bash
 
-An Ansible Role to install Bash and bash development tools.
+An Ansible Role to install Bash and Bash development tools.
 
 ## Motivation
 
@@ -32,7 +32,7 @@ mandatory for most Linux Users.
 
 This role installs bash packages and optionally development tools.
 
--   install [GNU bash](https://www.gnu.org/software/bash/) and bash-completion
+-   install [GNU Bash](https://www.gnu.org/software/bash/) and bash-completion
 -   install [ShellCheck](https://www.shellcheck.net/) (for bash scripting)
 -   install [Bats](https://github.com/sstephenson/bats) (the bash automated
   testing system)
@@ -72,16 +72,14 @@ ansible-galaxy install -r requirements.yml
 ---
 # defaults file for while_true_do.app_bash
 
-# Using dependencies to other roles (meta/main.yml)
-wtd_app_bash_dep_mgmt: true
-
+## Package Management
+# https://docs.ansible.com/ansible/latest/modules/package_module.html
 wtd_app_bash_package:
   - bash
   - bash-completion
 # State can be present|latest|absent
 wtd_app_bash_package_state: "present"
 
-# Tools used for bash scripting
 wtd_app_bash_devel_package:
   - ShellCheck
   - bats

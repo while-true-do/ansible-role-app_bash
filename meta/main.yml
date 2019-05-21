@@ -3,7 +3,7 @@
 galaxy_info:
   role_name: app_bash
   author: while-true-do.io
-  description: An Ansible Role to install Bash and bash development tools.
+  description: An Ansible Role to install Bash and Bash development tools.
 
   license: BSD
 
@@ -13,6 +13,7 @@ galaxy_info:
   # Please also maintain
   # - molecule/default/molecule.yml
   # - molecule/default/tests/test_default.py
+  # - .travis.yml
   platforms:
     - name: EL
       versions:
@@ -30,9 +31,4 @@ galaxy_info:
     - system
     - configuration
 
-dependencies:
-  - role: while_true_do.rpo_epel
-    when:
-      - ansible_distribution == "CentOS" or
-        ansible_distribution == "RedHat"
-      - wtd_app_bash_dep_mgmt
+dependencies: []
