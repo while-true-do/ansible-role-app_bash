@@ -58,7 +58,8 @@ git clone https://github.com/while-true-do/ansible-role-app_bash.git while_true_
 Dependencies:
 
 If you plan to install bash development tools on CentOS, you will need to have
-EPEL enabled. You can install all dependencies automatically.
+[EPEL](https://fedoraproject.org/wiki/EPEL) enabled.
+You can install all dependencies automatically.
 
 ```
 ansible-galaxy install -r requirements.yml
@@ -108,6 +109,7 @@ can be done in a
 ```
 - hosts: all
   roles:
+    - role: while_true_do.rpo_epel
     - role: while_true_do.app_bash
       wtd_app_bash_devel_package_state: "present"
 ```
